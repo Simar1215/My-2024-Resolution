@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function addResolution() {
+    const input = document.getElementById("resolutionInput");
+    const text = input.value.trim();
+
+    if (text !== "") {
+        const list = document.getElementById("resolutionList");
+        const li = document.createElement("li");
+        li.textContent = text;
+        list.appendChild(li);
+        input.value = "";
+    }
+}
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 Resolutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 >2024 Resolutions</h1>
+        <input type="text" id="resolutionInput" placeholder="Enter your resolution...">
+        <button onclick="addResolution()">Add</button>
+        <ul id="resolutionList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
